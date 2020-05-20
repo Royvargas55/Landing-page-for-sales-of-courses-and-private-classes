@@ -1,0 +1,57 @@
+/*
+Theme Name: LeadMore | One Page Parallax HTML5 Template
+Author: Markhor Themes
+Author URI: https://themeforest.net/user/markhorthemes
+Version: 1
+Description: Base theme for HTML5
+Text Domain: base
+Tags: one-column, two-columns, three-columns
+Theme URI: http://www.htmlbeans.com/html/LeadMore/
+*/
+
+
+
+/*------------------------------------------------------------------
+
+1. pageHeader / .pageHeader
+2. logo / .logo
+3. pageWrapper / .pageWrapper
+4. h1, .h1 / h1, .h1
+5. h2, .h2 / h2, .h2
+6. h3, .h3 / h3, .h3
+7. btn-lg / .btn-lg
+8. overlay / .overlay
+9. header / .header
+10. bannerSlider / .bannerSlider
+11. bannerBlock / .bannerBlock
+12. contactForm / .contactForm
+13. progressWrap / .progressWrap
+14. busniessStartWrap / .busniessStartWrap
+15. startUpBusniessSlider / .startUpBusniessSlider
+16. userDesinationWrap / .userDesinationWrap
+17. clientBlock / .clientBlock
+18. creativeBlock / .creativeBlock
+19. thankyouBlock / .thankyouBlock
+20. click / .click
+21. playBtnWrap / .playBtnWrap
+22. playBtnHolder / .playBtnHolder
+23. back-top / #back-top
+24. loader-holder / .loader-holder
+25. pageFooter / .pageFooter
+
+-------------------------------------------------------------------*/
+
+@import "vendor/bootstrap/functions";
+@import "vendor/bootstrap/variables";
+
+@import "customVariables";
+
+@import "vendor/bootstrap/mixins";
+//@import "base/customMixinx";
+
+@import "vendor/slick-slider";
+
+@import "layout/common";
+@import "layout/header";
+@import "layout/footer";
+

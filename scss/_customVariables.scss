@@ -1,0 +1,221 @@
+// Variables
+
+// Color system
+
+$white:    #fff !default;
+$gray-100: #f9f9f9;
+$gray-200: #eee;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #aaa;
+$gray-600: #999;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #222;
+$black:    #000 !default;
+
+$grays: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$grays: map-merge(
+  (
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900
+  ),
+  $grays
+);
+
+$blue:    #007bff !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #e53e3e;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+
+$colors: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$colors: map-merge(
+  (
+    "blue":       $blue,
+    "indigo":     $indigo,
+    "purple":     $purple,
+    "pink":       $pink,
+    "red":        $red,
+    "orange":     $orange,
+    "yellow":     $yellow,
+    "green":      $green,
+    "teal":       $teal,
+    "cyan":       $cyan,
+    "white":      $white,
+    "gray":       $gray-600,
+    "gray-dark":  $gray-800
+  ),
+  $colors
+);
+
+$primary:       $blue !default;
+$secondary:     $gray-600 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
+
+$theme-colors: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark
+  ),
+  $theme-colors
+);
+
+
+// Body
+$body-color:                $gray-600;
+
+
+// Links
+
+$link-hover-color:                        $danger;
+$link-hover-decoration:                   none;
+
+
+
+
+// Spacing
+
+$spacer: 5px;
+$spacers: () ;
+
+$spacers: map-merge(
+  (
+    0: 0,
+    1: $spacer,
+    2: ($spacer * 2),
+    3: ($spacer * 3),
+    4: ($spacer * 4),
+    5: ($spacer * 5),
+    6: ($spacer * 6),
+    7: ($spacer * 7),
+    8: ($spacer * 8),
+    9: ($spacer * 9),
+    10: ($spacer * 10),
+    11: ($spacer * 11),
+    12: ($spacer * 12),
+    13: ($spacer * 13),
+    14: ($spacer * 14),
+    15: ($spacer * 15),
+    16: ($spacer * 16),
+    17: ($spacer * 17),
+    18: ($spacer * 18),
+    19: ($spacer * 19),
+    20: ($spacer * 20),
+    21: ($spacer * 21),
+    22: ($spacer * 22),
+    23: ($spacer * 23),
+    24: ($spacer * 24),
+    25: ($spacer * 25),
+    26: ($spacer * 26),
+    27: ($spacer * 27),
+    28: ($spacer * 28),
+    29: ($spacer * 29),
+    30: ($spacer * 30),
+    31: ($spacer * 31),
+    32: ($spacer * 32),
+    33: ($spacer * 33),
+    34: ($spacer * 34),
+    35: ($spacer * 35),
+    36: ($spacer * 36),
+    37: ($spacer * 37),
+    38: ($spacer * 38),
+    39: ($spacer * 39),
+    40: ($spacer * 40),
+    41: ($spacer * 41),
+    42: ($spacer * 42),
+    43: ($spacer * 43)
+  ),
+  $spacers
+);
+
+
+
+// Grid breakpoints
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
+
+
+// Grid containers
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px
+);
+
+@include _assert-ascending($container-max-widths, "$container-max-widths");
+
+
+
+// Typography
+
+$font-family-sans-serif:      'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" ;
+$font-family-monospace:       'Montserrat', SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-family-base:            $font-family-sans-serif;
+
+// stylelint-enable value-keyword-case
+
+$font-size-base:              (14);
+
+
+$line-height-base:            1.7;
+
+$h1-font-size:                (32);
+$h2-font-size:                (32);
+$h3-font-size:                (28);
+$h4-font-size:                (20);
+$h5-font-size:                (18);
+$h6-font-size:                (14);
+
+$headings-font-family:        $font-family-monospace;
+$headings-font-weight:        700;
+$headings-color:              $gray-900;
+
+
+// Buttons
+
+$btn-font-family:             $font-family-monospace;
+$btn-font-size:               (14px);
+$btn-line-height:             (17px);
+
+
+$btn-font-size-lg:            (16px);
+$btn-line-height-lg:          (18px);

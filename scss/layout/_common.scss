@@ -1,0 +1,525 @@
+/*------------------------------------------------------------------
+3. pageWrapper / .pageWrapper
+-------------------------------------------------------------------*/
+.pageWrapper{
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+}
+.bgLightGray{
+	background-color: $gray-100;
+}
+.btn-danger{
+	&:focus{ box-shadow: none; }
+}
+/*------------------------------------------------------------------
+4. h1, .h1 / h1, .h1
+-------------------------------------------------------------------*/
+h1, .h1{
+	@include media-breakpoint-up(md){
+		font-size: 38px;
+	}
+	@include media-breakpoint-up(lg){
+		font-size: 42px;
+	}
+	@include media-breakpoint-up(xl){
+		font-size: 50px;
+		line-height: 65px;
+	}
+}
+/*------------------------------------------------------------------
+5. h2, .h2 / h2, .h2
+-------------------------------------------------------------------*/
+h2, .h2{
+	@include media-breakpoint-up(md){
+		font-size: 38px;
+	}
+	@include media-breakpoint-up(lg){
+		font-size: 42px;
+	}
+	@include media-breakpoint-up(xl){
+		font-size: 45px;
+	}
+}
+/*------------------------------------------------------------------
+6. h3, .h3 / h3, .h3
+-------------------------------------------------------------------*/
+h3, .h3{
+	@include media-breakpoint-up(md){
+		font-size: 30px;
+	}
+}
+/*------------------------------------------------------------------
+7. btn-lg / .btn-lg
+-------------------------------------------------------------------*/
+.btn-lg{
+	@include media-breakpoint-up(sm){
+		font-size: 18px;
+		line-height: 20px;
+	}
+	@include media-breakpoint-up(lg){
+		font-size: 20px;
+		line-height: 22px;
+	}
+}
+/*------------------------------------------------------------------
+8. overlay / .overlay
+-------------------------------------------------------------------*/
+.overlay{
+	z-index: 0;
+	&:after{
+		position: absolute;
+		content: "";
+		top:0;
+		left: 0;
+		@include size( 100%);
+		background-color: rgba($gray-900, 0.8);
+	}
+}
+.bgCover{
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+/*------------------------------------------------------------------
+9. header / .header
+-------------------------------------------------------------------*/
+.header{
+	font-size: 14px;
+	line-height: 26px;
+	@include media-breakpoint-up(sm){
+		font-size: 16px;
+		line-height: 30px;
+	}
+	.h3{
+		@include media-breakpoint-up(lg){
+			line-height: 45px;
+		}
+	}
+	.h6{
+		color: $gray-600;
+		font-size: $font-family-sans-serif;
+	}
+}
+/*------------------------------------------------------------------
+10. bannerSlider / .bannerSlider
+-------------------------------------------------------------------*/
+.bannerSlider{
+	.slick-dots{
+		margin-top: -38px;
+		margin-bottom: 13px;
+		padding-left: 0;
+		list-style-type: none;
+		display: flex;
+		justify-content: center;
+		li{
+			position: relative;
+			margin-right: 5px;
+			margin-left: 5px;
+		}
+		.slick-active{
+			button{
+				&:before{
+					background-color: $red;
+				}		
+			}
+		}
+		button{
+			border: 0;
+			padding: 0;
+			line-height: 8px;
+			@include size(8px);
+			border-radius: 25px;
+			text-indent: -9999px;
+			position: relative;
+			overflow: hidden;
+			outline: none;
+			&:before{
+				position: absolute;
+				content: "";
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				text-indent: 0;
+				background-color: rgba($white, 0.5);
+			}
+		}
+	}
+}
+/*------------------------------------------------------------------
+11. bannerBlock / .bannerBlock
+-------------------------------------------------------------------*/
+.bannerBlock{
+	min-height: 600px;
+	@include media-breakpoint-up(md){
+		min-height: 670px;
+	}
+	@include media-breakpoint-up(xl){
+		min-height: 800px;
+	}
+	.caption{
+		z-index: 1;
+		font-size: 14px;
+		line-height: 26px;
+		@include media-breakpoint-up(sm){
+			font-size: 16px;
+			line-height: 30px;
+		}
+		.btn{
+			min-width: 200px;
+			padding-top: 18px;
+			padding-bottom: 18px;
+			@include media-breakpoint-up(sm){
+				min-width: 230px;
+				padding-top: 21px;
+				padding-bottom: 21px;
+			}
+			@include media-breakpoint-up(lg){
+				min-width: 280px;
+				padding-top: 23px;
+				padding-bottom: 23px;
+			}
+		}
+	}
+}
+/*------------------------------------------------------------------
+12. contactForm / .contactForm
+-------------------------------------------------------------------*/
+.contactForm{
+	z-index: 1;
+	.h4{
+		@include media-breakpoint-up(md){
+			font-size: 20px;
+		}
+		@include media-breakpoint-up(xl){
+			font-size: 25px;
+			line-height: 30px;
+		}
+	}
+	label{
+		font-size: 12px;
+		line-height: 14px;
+		margin-bottom: 7px;
+		color: $gray-500;
+		font-family: $font-family-monospace;
+	}
+	.form-control{
+		font-size: 0.8rem;
+		height: 45px;
+		box-shadow: none;
+		color: $gray-900;
+
+		&:focus{
+			border-color: $danger;
+		}
+	}
+	.btn{
+		width: 100%;
+		padding-top: 13px;
+		padding-bottom: 13px;
+		&.disabled{ opacity: 1; }
+		&:active,
+		&:hover,
+		&:focus{
+			box-shadow: none;
+		}
+	}
+}
+.error,
+.success{
+	margin-bottom: 20px;
+	border-radius: $border-radius;
+	padding: 12px 25px;
+	font-size: 14px;
+	line-height: 20px;
+	color: $white;
+}
+#msgSubmit{
+	display: none;
+	&.error{
+		display: block;
+	}
+	&.success{
+		display: block;
+	}
+}
+.success {
+	background-color: $green;
+}
+.error{
+	background-color: $red;
+}
+.ourServiceBlock,
+.creativeBlock{
+	.header{
+		z-index: 1;
+	}
+}
+.hrBdr{
+	border-color: $gray-200;
+}
+/*------------------------------------------------------------------
+13. progressWrap / .progressWrap
+-------------------------------------------------------------------*/
+.progressWrap{
+	border:1px solid $gray-200;
+	padding: 48px;
+	.h2{
+		font-size: 45px;
+		line-height: 50px;
+		@include media-breakpoint-up(lg){
+			line-height: 1.2;
+		}
+	}
+}
+/*------------------------------------------------------------------
+14. busniessStartWrap / .busniessStartWrap
+-------------------------------------------------------------------*/
+.busniessStartWrap{
+	border:1px solid $gray-200;
+	.icnHolder{
+		height: 62px;
+		width: 78px;
+	}
+}
+/*------------------------------------------------------------------
+15. startUpBusniessSlider / .startUpBusniessSlider
+-------------------------------------------------------------------*/
+.startUpBusniessSlider{
+	z-index: 1;
+}
+.bgImg{
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: calc(100% - 135px);
+	@include media-breakpoint-up(sm){
+		height: calc(100% - 155px);
+	}
+}
+/*------------------------------------------------------------------
+16. userDesinationWrap / .userDesinationWrap
+-------------------------------------------------------------------*/
+.userDesinationWrap{
+	cite{
+		font-size: 16px;
+		line-height: 18px;
+		font-style: normal;
+		a{
+			color: $gray-900;
+			transition: color 0.35s ease;
+			&:hover{
+				color: $danger;
+			}
+		}
+	}
+	strong{
+		font-family: $font-family-monospace;
+		margin-bottom: 4px;
+	}
+	.desination{
+		font-size: 12px;
+		line-height: 14px;
+		color: $gray-600;
+		font-family: $font-family-sans-serif;
+	}
+	.imgHolder{
+		@include size(70px);
+		@include media-breakpoint-up(xl){
+			@include size(80px);
+		}
+	}
+}
+/*------------------------------------------------------------------
+17. clientBlock / .clientBlock
+-------------------------------------------------------------------*/
+.clientBlock{
+	q{
+		display: block;
+		quotes: none;
+		line-height: 23px;
+	}
+}
+/*------------------------------------------------------------------
+18. creativeBlock / .creativeBlock
+-------------------------------------------------------------------*/
+.creativeBlock{
+	p{
+		margin-bottom: 40px;
+	}
+	.btn{
+		min-width: 200px;
+		padding-top: 18px;
+		padding-bottom: 18px;
+		@include media-breakpoint-up(sm){
+			min-width: 230px;
+			padding-top: 21px;
+			padding-bottom: 21px;
+		}
+		@include media-breakpoint-up(lg){
+			min-width: 280px;
+			padding-top: 23px;
+			padding-bottom: 23px;
+		}
+	}
+	.h1{
+		@include media-breakpoint-only(xs){
+			font-size: 30px;
+		}
+		@include media-breakpoint-only(md){
+			font-size: 37px;
+		}
+	}
+}
+/*------------------------------------------------------------------
+19. thankyouBlock / .thankyouBlock
+-------------------------------------------------------------------*/
+.thankyouBlock{
+	min-height: 100%;
+	h1{
+		font-size: 30px;
+		line-height: 40px;
+		font-family: $font-family-monospace;
+		color: $white;
+		font-weight: 400;
+		@include media-breakpoint-up(md){
+			font-size: 45px;
+			line-height: 55px;
+		}
+		@include media-breakpoint-up(xl){
+			font-size: 55px;
+			line-height: 65px;
+		}
+	}
+}
+/*------------------------------------------------------------------
+20. click / .click
+-------------------------------------------------------------------*/
+.click{
+	color: $red;
+	text-decoration: underline;
+	line-height: 18px;
+}
+.videoHolder{
+	max-width: 100%;
+}
+/*------------------------------------------------------------------
+21. playBtnWrap / .playBtnWrap
+-------------------------------------------------------------------*/
+.playBtnWrap{
+	@include size(60px);
+	@include media-breakpoint-up(sm){
+		@include size(70px);
+	}
+	@include media-breakpoint-up(md){
+		@include size(80px);
+	}
+	&:before,
+	&:after{
+		position: absolute;
+		content: "";
+		border:1px solid $white;
+		border-radius: 100%;
+		animation: myOrbit 4s infinite;
+	}
+	&:before{
+		top: -20px;
+		right: -20px;
+		@include size(100px);
+		@include media-breakpoint-up(sm){
+			@include size(110px);
+		}
+		@include media-breakpoint-up(md){
+			@include size(120px);
+		}
+	}
+	&:after{
+		top: -10px;
+		right: -10px;
+		@include size(80px);
+		@include media-breakpoint-up(sm){
+			@include size(90px);
+		}
+		@include media-breakpoint-up(md){
+			@include size(100px);
+		}
+	}
+}
+@keyframes myOrbit {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+/*------------------------------------------------------------------
+22. playBtnHolder / .playBtnHolder
+-------------------------------------------------------------------*/
+.playBtnHolder{
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	.playIcn{
+		@include size(0);
+		border-style: solid;
+		border-width: 8px 0 8px 15px;
+		border-color: transparent transparent transparent $gray-800;
+	}
+	.txt{
+		font-size: 	13px;
+		line-height: 20px;
+		@include media-breakpoint-up(md){
+			font-size: 	15px;
+			line-height: 24px;
+		}
+		@include media-breakpoint-only(xs){
+			text-shadow: 0px 0px 4px rgba($black,0.5);
+		}
+	}
+	.arrowImg{
+		max-width: 17px;
+		right: -31px;
+		bottom: 13px;
+	}
+}
+/*------------------------------------------------------------------
+23. back-top / #back-top
+-------------------------------------------------------------------*/
+#back-top{
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	font-size: 18px;
+	line-height: 20px;
+    cursor: pointer;
+    float: right;
+    @include size(50px, 50px);
+    padding: 14px 0;
+    z-index: 9;
+    opacity: 0;
+    background: $red;
+    color: $white;
+    visibility: hidden;
+    transition: all 0.6s ease 0s;
+    &.active{
+    	opacity: 1;
+    	visibility: visible;
+    }
+}
+/*------------------------------------------------------------------
+24. loader-holder / .loader-holder
+-------------------------------------------------------------------*/
+.loader-holder{
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  position: fixed;
+  background-color: rgba($white, 0.9);
+  .block {
+	  top: 50%;
+	  left: 50%;
+	  position: absolute;
+	  transform: translate(-50%, -50%);
+	}
+}
